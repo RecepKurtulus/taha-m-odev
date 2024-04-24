@@ -1,0 +1,15 @@
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\bin\Debug\net7.0-windows\real-estate-app.exe
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\bin\Debug\net7.0-windows\real-estate-app.deps.json
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\bin\Debug\net7.0-windows\real-estate-app.runtimeconfig.json
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\bin\Debug\net7.0-windows\real-estate-app.dll
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\bin\Debug\net7.0-windows\real-estate-app.pdb
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.csproj.AssemblyReference.cache
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.AssemblyInfoInputs.cache
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.AssemblyInfo.cs
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.csproj.CoreCompileInputs.cache
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.dll
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\refint\real-estate-app.dll
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.pdb
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\real-estate-app.genruntimeconfig.cache
+C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\obj\Debug\net7.0-windows\ref\real-estate-app.dll

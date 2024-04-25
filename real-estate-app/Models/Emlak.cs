@@ -14,17 +14,21 @@ namespace real_estate_app.Models
 
             [Required]
             public string Adres { get; set; }
+            public string Sehir { get; set; }
+            public string Ilce { get; set; }
 
             public int OdaSayisi { get; set; }
 
-            public double MetreKare { get; set; }
+            public int MetreKare { get; set; }
 
-            public decimal Fiyat { get; set; }
+            public int Fiyat { get; set; }
+
+            public bool SatildiMi { get; set; }
 
             // Emlağın bağlı olduğu Satıcı Id'si
             public int SaticiId { get; set; }
 
-            // Navigation property - Emlak modeli ile Satıcı modeli arasında bir ilişki kurar
+            // Navigation property - Emlak modeli ile Satıcı modeli arasında bir ilişki kuruyor
             public Satici Satici { get; set; }
         
     }

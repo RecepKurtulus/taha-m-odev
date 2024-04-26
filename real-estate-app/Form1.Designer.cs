@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.emlakListesiPanelButon = new System.Windows.Forms.Button();
             this.EmlakKayitPaneliButon = new System.Windows.Forms.Button();
             this.SaticiPaneliButton = new System.Windows.Forms.Button();
             this.KayitPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.kayitOlButon = new System.Windows.Forms.Button();
             this.SaticiTelefon = new System.Windows.Forms.TextBox();
             this.SaticiSoyisim = new System.Windows.Forms.TextBox();
@@ -73,7 +73,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.filtreleButon = new System.Windows.Forms.Button();
-            this.emlakBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuPanel.SuspendLayout();
             this.KayitPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,12 +81,11 @@
             this.emlakListesiPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filtrelenmisEmlakListesiUi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emlakBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
             // 
-            this.menuPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(152)))));
             this.menuPanel.Controls.Add(this.emlakListesiPanelButon);
             this.menuPanel.Controls.Add(this.EmlakKayitPaneliButon);
             this.menuPanel.Controls.Add(this.SaticiPaneliButton);
@@ -136,7 +134,7 @@
             // 
             // KayitPanel
             // 
-            this.KayitPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.KayitPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(239)))), ((int)(((byte)(219)))));
             this.KayitPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.KayitPanel.Controls.Add(this.panel1);
             this.KayitPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -148,48 +146,59 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(217)))), ((int)(((byte)(180)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.kayitOlButon);
             this.panel1.Controls.Add(this.SaticiTelefon);
             this.panel1.Controls.Add(this.SaticiSoyisim);
             this.panel1.Controls.Add(this.SaticiIsim);
-            this.panel1.Location = new System.Drawing.Point(506, 180);
+            this.panel1.Location = new System.Drawing.Point(507, 208);
             this.panel1.Name = "panel1";
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(444, 292);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(108, 41);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(222, 37);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Satıcı Kayıt Alanı";
             // 
             // kayitOlButon
             // 
-            this.kayitOlButon.Location = new System.Drawing.Point(172, 200);
+            this.kayitOlButon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(217)))), ((int)(((byte)(180)))));
+            this.kayitOlButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kayitOlButon.Location = new System.Drawing.Point(171, 229);
             this.kayitOlButon.Name = "kayitOlButon";
             this.kayitOlButon.Size = new System.Drawing.Size(94, 29);
             this.kayitOlButon.TabIndex = 3;
             this.kayitOlButon.Text = "Kayıt Ol";
-            this.kayitOlButon.UseVisualStyleBackColor = true;
+            this.kayitOlButon.UseVisualStyleBackColor = false;
             this.kayitOlButon.Click += new System.EventHandler(this.kayitOlButon_Click);
             // 
             // SaticiTelefon
             // 
-            this.SaticiTelefon.Location = new System.Drawing.Point(127, 112);
+            this.SaticiTelefon.Location = new System.Drawing.Point(115, 160);
             this.SaticiTelefon.Name = "SaticiTelefon";
             this.SaticiTelefon.PlaceholderText = "Telefon Numaranız";
             this.SaticiTelefon.Size = new System.Drawing.Size(210, 26);
             this.SaticiTelefon.TabIndex = 2;
-            this.SaticiTelefon.TextChanged += new System.EventHandler(this.SaticiTelefon_TextChanged);
             // 
             // SaticiSoyisim
             // 
-            this.SaticiSoyisim.Location = new System.Drawing.Point(127, 80);
+            this.SaticiSoyisim.Location = new System.Drawing.Point(115, 128);
             this.SaticiSoyisim.Name = "SaticiSoyisim";
             this.SaticiSoyisim.PlaceholderText = "Soyisminiz";
             this.SaticiSoyisim.Size = new System.Drawing.Size(210, 26);
             this.SaticiSoyisim.TabIndex = 1;
-            this.SaticiSoyisim.TextChanged += new System.EventHandler(this.SaticiSoyisim_TextChanged);
             // 
             // SaticiIsim
             // 
-            this.SaticiIsim.Location = new System.Drawing.Point(127, 47);
+            this.SaticiIsim.Location = new System.Drawing.Point(115, 94);
             this.SaticiIsim.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.SaticiIsim.Name = "SaticiIsim";
             this.SaticiIsim.PlaceholderText = "İsminiz";
@@ -198,7 +207,7 @@
             // 
             // EmlakOlusturPanel
             // 
-            this.EmlakOlusturPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.EmlakOlusturPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(239)))), ((int)(((byte)(219)))));
             this.EmlakOlusturPanel.Controls.Add(this.panel2);
             this.EmlakOlusturPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmlakOlusturPanel.Location = new System.Drawing.Point(0, 0);
@@ -208,7 +217,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(217)))), ((int)(((byte)(180)))));
             this.panel2.Controls.Add(this.ilceGirisi);
             this.panel2.Controls.Add(this.sehirGirisi);
             this.panel2.Controls.Add(this.label2);
@@ -226,7 +235,7 @@
             // 
             // ilceGirisi
             // 
-            this.ilceGirisi.Location = new System.Drawing.Point(170, 279);
+            this.ilceGirisi.Location = new System.Drawing.Point(173, 259);
             this.ilceGirisi.Name = "ilceGirisi";
             this.ilceGirisi.PlaceholderText = "İlçe";
             this.ilceGirisi.Size = new System.Drawing.Size(231, 26);
@@ -234,7 +243,7 @@
             // 
             // sehirGirisi
             // 
-            this.sehirGirisi.Location = new System.Drawing.Point(170, 247);
+            this.sehirGirisi.Location = new System.Drawing.Point(173, 227);
             this.sehirGirisi.Name = "sehirGirisi";
             this.sehirGirisi.PlaceholderText = "Şehir";
             this.sehirGirisi.Size = new System.Drawing.Size(231, 26);
@@ -243,7 +252,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 312);
+            this.label2.Location = new System.Drawing.Point(173, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 18);
             this.label2.TabIndex = 7;
@@ -253,14 +262,15 @@
             // 
             this.saticiListesiEmlakKayit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.saticiListesiEmlakKayit.FormattingEnabled = true;
-            this.saticiListesiEmlakKayit.Location = new System.Drawing.Point(170, 333);
+            this.saticiListesiEmlakKayit.Location = new System.Drawing.Point(173, 313);
             this.saticiListesiEmlakKayit.Name = "saticiListesiEmlakKayit";
             this.saticiListesiEmlakKayit.Size = new System.Drawing.Size(231, 26);
             this.saticiListesiEmlakKayit.TabIndex = 6;
             // 
             // emlakKaydetButon
             // 
-            this.emlakKaydetButon.Location = new System.Drawing.Point(236, 365);
+            this.emlakKaydetButon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.emlakKaydetButon.Location = new System.Drawing.Point(239, 345);
             this.emlakKaydetButon.Name = "emlakKaydetButon";
             this.emlakKaydetButon.Size = new System.Drawing.Size(94, 29);
             this.emlakKaydetButon.TabIndex = 5;
@@ -270,7 +280,7 @@
             // 
             // metrekareGirisi
             // 
-            this.metrekareGirisi.Location = new System.Drawing.Point(170, 183);
+            this.metrekareGirisi.Location = new System.Drawing.Point(173, 163);
             this.metrekareGirisi.Name = "metrekareGirisi";
             this.metrekareGirisi.PlaceholderText = "Metrekare";
             this.metrekareGirisi.Size = new System.Drawing.Size(231, 26);
@@ -278,7 +288,7 @@
             // 
             // fiyatGirisi
             // 
-            this.fiyatGirisi.Location = new System.Drawing.Point(170, 215);
+            this.fiyatGirisi.Location = new System.Drawing.Point(173, 195);
             this.fiyatGirisi.Name = "fiyatGirisi";
             this.fiyatGirisi.PlaceholderText = "Fiyat";
             this.fiyatGirisi.Size = new System.Drawing.Size(231, 26);
@@ -286,7 +296,7 @@
             // 
             // odaSayisiGirisi
             // 
-            this.odaSayisiGirisi.Location = new System.Drawing.Point(170, 151);
+            this.odaSayisiGirisi.Location = new System.Drawing.Point(173, 131);
             this.odaSayisiGirisi.Name = "odaSayisiGirisi";
             this.odaSayisiGirisi.PlaceholderText = "Oda Sayısı";
             this.odaSayisiGirisi.Size = new System.Drawing.Size(231, 26);
@@ -304,7 +314,7 @@
             // 
             // adresGirisi
             // 
-            this.adresGirisi.Location = new System.Drawing.Point(170, 119);
+            this.adresGirisi.Location = new System.Drawing.Point(173, 99);
             this.adresGirisi.Name = "adresGirisi";
             this.adresGirisi.PlaceholderText = "Adres";
             this.adresGirisi.Size = new System.Drawing.Size(231, 26);
@@ -312,7 +322,7 @@
             // 
             // emlakListesiPanel
             // 
-            this.emlakListesiPanel.BackColor = System.Drawing.SystemColors.Info;
+            this.emlakListesiPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(239)))), ((int)(((byte)(219)))));
             this.emlakListesiPanel.Controls.Add(this.panel3);
             this.emlakListesiPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.emlakListesiPanel.Location = new System.Drawing.Point(0, 0);
@@ -322,7 +332,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(217)))), ((int)(((byte)(180)))));
             this.panel3.Controls.Add(this.emlakGuncelle);
             this.panel3.Controls.Add(this.degistirmelikDurumlar);
             this.panel3.Controls.Add(this.emlakIdDegistirmelik);
@@ -432,9 +442,15 @@
             // 
             // filtrelenmisEmlakListesiUi
             // 
+            this.filtrelenmisEmlakListesiUi.AllowUserToAddRows = false;
+            this.filtrelenmisEmlakListesiUi.AllowUserToDeleteRows = false;
+            this.filtrelenmisEmlakListesiUi.AllowUserToResizeColumns = false;
+            this.filtrelenmisEmlakListesiUi.AllowUserToResizeRows = false;
+            this.filtrelenmisEmlakListesiUi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(152)))));
             this.filtrelenmisEmlakListesiUi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.filtrelenmisEmlakListesiUi.Location = new System.Drawing.Point(37, 175);
             this.filtrelenmisEmlakListesiUi.Name = "filtrelenmisEmlakListesiUi";
+            this.filtrelenmisEmlakListesiUi.ReadOnly = true;
             this.filtrelenmisEmlakListesiUi.RowHeadersWidth = 51;
             this.filtrelenmisEmlakListesiUi.RowTemplate.Height = 29;
             this.filtrelenmisEmlakListesiUi.Size = new System.Drawing.Size(896, 375);
@@ -525,19 +541,15 @@
             this.filtreleButon.UseVisualStyleBackColor = true;
             this.filtreleButon.Click += new System.EventHandler(this.filtreleButon_Click);
             // 
-            // emlakBindingSource
-            // 
-            this.emlakBindingSource.DataSource = typeof(real_estate_app.Models.Emlak);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.KayitPanel);
             this.Controls.Add(this.emlakListesiPanel);
             this.Controls.Add(this.EmlakOlusturPanel);
-            this.Controls.Add(this.KayitPanel);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Form1";
@@ -553,7 +565,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filtrelenmisEmlakListesiUi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emlakBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,7 +605,6 @@
         private TextBox odaSayisiFiltre;
         private TextBox ilceGirisi;
         private TextBox sehirGirisi;
-        private BindingSource emlakBindingSource;
         public DataGridView filtrelenmisEmlakListesiUi;
         private TextBox sehirFiltre;
         private TextBox ilceFiltre;
@@ -605,5 +615,6 @@
         private Button emlakGuncelle;
         private ComboBox degistirmelikDurumlar;
         private TextBox emlakIdDegistirmelik;
+        private Label label10;
     }
 }

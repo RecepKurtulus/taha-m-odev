@@ -23,20 +23,7 @@ namespace real_estate_app
         }
         
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SaticiSoyisim_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaticiTelefon_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void kayitOlButon_Click(object sender, EventArgs e)
         {

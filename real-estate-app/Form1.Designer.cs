@@ -53,8 +53,16 @@
             this.adresGirisi = new System.Windows.Forms.TextBox();
             this.emlakListesiPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.emlakGuncelle = new System.Windows.Forms.Button();
+            this.degistirmelikDurumlar = new System.Windows.Forms.ComboBox();
+            this.emlakIdDegistirmelik = new System.Windows.Forms.TextBox();
+            this.durumFiltre = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ilceFiltre = new System.Windows.Forms.TextBox();
+            this.sehirFiltre = new System.Windows.Forms.TextBox();
             this.filtrelenmisEmlakListesiUi = new System.Windows.Forms.DataGridView();
-            this.emlakBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metreKareFiltre = new System.Windows.Forms.TextBox();
             this.odaSayisiFiltre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.filtreleButon = new System.Windows.Forms.Button();
+            this.emlakBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuPanel.SuspendLayout();
             this.KayitPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -314,6 +323,15 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel3.Controls.Add(this.emlakGuncelle);
+            this.panel3.Controls.Add(this.degistirmelikDurumlar);
+            this.panel3.Controls.Add(this.emlakIdDegistirmelik);
+            this.panel3.Controls.Add(this.durumFiltre);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.ilceFiltre);
+            this.panel3.Controls.Add(this.sehirFiltre);
             this.panel3.Controls.Add(this.filtrelenmisEmlakListesiUi);
             this.panel3.Controls.Add(this.metreKareFiltre);
             this.panel3.Controls.Add(this.odaSayisiFiltre);
@@ -330,38 +348,116 @@
             this.panel3.Size = new System.Drawing.Size(958, 564);
             this.panel3.TabIndex = 1;
             // 
+            // emlakGuncelle
+            // 
+            this.emlakGuncelle.Location = new System.Drawing.Point(184, 131);
+            this.emlakGuncelle.Name = "emlakGuncelle";
+            this.emlakGuncelle.Size = new System.Drawing.Size(94, 29);
+            this.emlakGuncelle.TabIndex = 23;
+            this.emlakGuncelle.Text = "Güncelle";
+            this.emlakGuncelle.UseVisualStyleBackColor = true;
+            this.emlakGuncelle.Click += new System.EventHandler(this.emlakGuncelle_Click);
+            // 
+            // degistirmelikDurumlar
+            // 
+            this.degistirmelikDurumlar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.degistirmelikDurumlar.FormattingEnabled = true;
+            this.degistirmelikDurumlar.Items.AddRange(new object[] {
+            "Satıldı",
+            "Satışta"});
+            this.degistirmelikDurumlar.Location = new System.Drawing.Point(165, 99);
+            this.degistirmelikDurumlar.Name = "degistirmelikDurumlar";
+            this.degistirmelikDurumlar.Size = new System.Drawing.Size(113, 26);
+            this.degistirmelikDurumlar.TabIndex = 22;
+            // 
+            // emlakIdDegistirmelik
+            // 
+            this.emlakIdDegistirmelik.Location = new System.Drawing.Point(37, 99);
+            this.emlakIdDegistirmelik.Name = "emlakIdDegistirmelik";
+            this.emlakIdDegistirmelik.PlaceholderText = "Emlak Id";
+            this.emlakIdDegistirmelik.Size = new System.Drawing.Size(113, 26);
+            this.emlakIdDegistirmelik.TabIndex = 21;
+            // 
+            // durumFiltre
+            // 
+            this.durumFiltre.FormattingEnabled = true;
+            this.durumFiltre.Items.AddRange(new object[] {
+            "Satıldı",
+            "Satışta"});
+            this.durumFiltre.Location = new System.Drawing.Point(422, 48);
+            this.durumFiltre.Name = "durumFiltre";
+            this.durumFiltre.Size = new System.Drawing.Size(113, 26);
+            this.durumFiltre.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(422, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 18);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Durum";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(680, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 18);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "İlçe";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(551, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 18);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Şehir";
+            // 
+            // ilceFiltre
+            // 
+            this.ilceFiltre.Location = new System.Drawing.Point(680, 48);
+            this.ilceFiltre.Name = "ilceFiltre";
+            this.ilceFiltre.Size = new System.Drawing.Size(113, 26);
+            this.ilceFiltre.TabIndex = 15;
+            // 
+            // sehirFiltre
+            // 
+            this.sehirFiltre.Location = new System.Drawing.Point(551, 48);
+            this.sehirFiltre.Name = "sehirFiltre";
+            this.sehirFiltre.Size = new System.Drawing.Size(113, 26);
+            this.sehirFiltre.TabIndex = 14;
+            // 
             // filtrelenmisEmlakListesiUi
             // 
             this.filtrelenmisEmlakListesiUi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.filtrelenmisEmlakListesiUi.Location = new System.Drawing.Point(34, 162);
+            this.filtrelenmisEmlakListesiUi.Location = new System.Drawing.Point(37, 175);
             this.filtrelenmisEmlakListesiUi.Name = "filtrelenmisEmlakListesiUi";
             this.filtrelenmisEmlakListesiUi.RowHeadersWidth = 51;
             this.filtrelenmisEmlakListesiUi.RowTemplate.Height = 29;
             this.filtrelenmisEmlakListesiUi.Size = new System.Drawing.Size(896, 375);
             this.filtrelenmisEmlakListesiUi.TabIndex = 13;
             // 
-            // emlakBindingSource
-            // 
-            this.emlakBindingSource.DataSource = typeof(real_estate_app.Models.Emlak);
-            // 
             // metreKareFiltre
             // 
-            this.metreKareFiltre.Location = new System.Drawing.Point(76, 101);
+            this.metreKareFiltre.Location = new System.Drawing.Point(37, 48);
             this.metreKareFiltre.Name = "metreKareFiltre";
-            this.metreKareFiltre.Size = new System.Drawing.Size(151, 26);
+            this.metreKareFiltre.Size = new System.Drawing.Size(113, 26);
             this.metreKareFiltre.TabIndex = 12;
             // 
             // odaSayisiFiltre
             // 
-            this.odaSayisiFiltre.Location = new System.Drawing.Point(427, 101);
+            this.odaSayisiFiltre.Location = new System.Drawing.Point(294, 48);
             this.odaSayisiFiltre.Name = "odaSayisiFiltre";
-            this.odaSayisiFiltre.Size = new System.Drawing.Size(151, 26);
+            this.odaSayisiFiltre.Size = new System.Drawing.Size(113, 26);
             this.odaSayisiFiltre.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(427, 73);
+            this.label6.Location = new System.Drawing.Point(294, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 18);
             this.label6.TabIndex = 10;
@@ -369,24 +465,24 @@
             // 
             // fiyatFiltreSon
             // 
-            this.fiyatFiltreSon.Location = new System.Drawing.Point(329, 101);
+            this.fiyatFiltreSon.Location = new System.Drawing.Point(220, 48);
             this.fiyatFiltreSon.Name = "fiyatFiltreSon";
             this.fiyatFiltreSon.PlaceholderText = "Son";
-            this.fiyatFiltreSon.Size = new System.Drawing.Size(75, 26);
+            this.fiyatFiltreSon.Size = new System.Drawing.Size(58, 26);
             this.fiyatFiltreSon.TabIndex = 9;
             // 
             // fiyatFilteBaslangic
             // 
-            this.fiyatFilteBaslangic.Location = new System.Drawing.Point(248, 101);
+            this.fiyatFilteBaslangic.Location = new System.Drawing.Point(165, 48);
             this.fiyatFilteBaslangic.Name = "fiyatFilteBaslangic";
             this.fiyatFilteBaslangic.PlaceholderText = "Başlangıç";
-            this.fiyatFilteBaslangic.Size = new System.Drawing.Size(75, 26);
+            this.fiyatFilteBaslangic.Size = new System.Drawing.Size(53, 26);
             this.fiyatFilteBaslangic.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(602, 73);
+            this.label5.Location = new System.Drawing.Point(808, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 18);
             this.label5.TabIndex = 7;
@@ -396,15 +492,15 @@
             // 
             this.saticiFiltre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.saticiFiltre.FormattingEnabled = true;
-            this.saticiFiltre.Location = new System.Drawing.Point(602, 101);
+            this.saticiFiltre.Location = new System.Drawing.Point(808, 48);
             this.saticiFiltre.Name = "saticiFiltre";
-            this.saticiFiltre.Size = new System.Drawing.Size(151, 26);
+            this.saticiFiltre.Size = new System.Drawing.Size(113, 26);
             this.saticiFiltre.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(248, 73);
+            this.label4.Location = new System.Drawing.Point(165, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 18);
             this.label4.TabIndex = 5;
@@ -413,7 +509,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 72);
+            this.label3.Location = new System.Drawing.Point(37, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 3;
@@ -421,13 +517,17 @@
             // 
             // filtreleButon
             // 
-            this.filtreleButon.Location = new System.Drawing.Point(777, 99);
+            this.filtreleButon.Location = new System.Drawing.Point(827, 127);
             this.filtreleButon.Name = "filtreleButon";
             this.filtreleButon.Size = new System.Drawing.Size(94, 29);
             this.filtreleButon.TabIndex = 2;
             this.filtreleButon.Text = "Filtrele";
             this.filtreleButon.UseVisualStyleBackColor = true;
             this.filtreleButon.Click += new System.EventHandler(this.filtreleButon_Click);
+            // 
+            // emlakBindingSource
+            // 
+            this.emlakBindingSource.DataSource = typeof(real_estate_app.Models.Emlak);
             // 
             // Form1
             // 
@@ -496,5 +596,14 @@
         private TextBox sehirGirisi;
         private BindingSource emlakBindingSource;
         public DataGridView filtrelenmisEmlakListesiUi;
+        private TextBox sehirFiltre;
+        private TextBox ilceFiltre;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private ComboBox durumFiltre;
+        private Button emlakGuncelle;
+        private ComboBox degistirmelikDurumlar;
+        private TextBox emlakIdDegistirmelik;
     }
 }

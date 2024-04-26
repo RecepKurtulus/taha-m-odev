@@ -110,7 +110,7 @@ namespace real_estate_app
             saticiFiltre.Items.Clear();
             foreach (Satici satici in db.Saticilar)
             {
-                saticiFiltre.Items.Add(satici.Ad);
+                saticiFiltre.Items.Add($"{satici.Ad} {satici.Soyad}");
             }
             KayitPanel.Visible = false;
             EmlakOlusturPanel.Visible = false;
@@ -141,27 +141,56 @@ namespace real_estate_app
         private void filtreleButon_Click(object sender, EventArgs e)
         {
             List<Emlak> filtrelenmisEmlakListesi= new List<Emlak>();
-            var emlakdb = db.Emlaklar;
-            
-            if (metreKareFiltre.Text.ToString()!=string.Empty)
+            var emlakdb = db.Emlaklar.ToList();
+            bool metreKareVarMi, odaSayisiVarMi,fiyatVarMi,sehirVarMi,ilceVarMi,durumVarMi,saticiVarMi= false;
+            metreKareVarMi = (metreKareFiltre.Text.ToString() != string.Empty);
+            odaSayisiVarMi = (odaSayisiFiltre.Text.ToString() != string.Empty);
+            fiyatVarMi = (fiyatFilteBaslangic.Text.ToString() != string.Empty && fiyatFiltreSon.Text.ToString() != string.Empty);
+            saticiVarMi = (saticiFiltre.Text.ToString() != string.Empty);
+            durumVarMi = (durumFiltre.Text.ToString() != string.Empty);
+            sehirVarMi = (sehirFiltre.Text.ToString() != string.Empty);
+            ilceVarMi = (ilceFiltre.Text.ToString() != string.Empty);
+            foreach (Emlak emlak in emlakdb)
             {
-                foreach(Emlak emlak in emlakdb)
-                {
-                    if (emlak.MetreKare <= Convert.ToInt32(metreKareFiltre.Text)){
-                        
-                        filtrelenmisEmlakListesi.Add(emlak);
-                        MessageBox.Show(emlak.ToString());
-                    }
-                   
+                Satici satici = db.Saticilar.FirstOrDefault(s => s.SaticiId == emlak.SaticiId);
+                string saticiIsim = $"{satici.Ad} {satici.Soyad}";
+                string durum = (emlak.SatildiMi) ? "Satýldý" : "Satýþta";
+                if(metreKareVarMi&& emlak.MetreKare > Convert.ToInt32(metreKareFiltre.Text)){
+                    continue;
                 }
+                if (fiyatVarMi &&(emlak.Fiyat > Convert.ToInt32(fiyatFiltreSon.Text) || emlak.Fiyat < Convert.ToInt32(fiyatFilteBaslangic.Text)))
+                {
+                    continue;
+                }
+                if (odaSayisiVarMi && emlak.OdaSayisi > Convert.ToInt32(odaSayisiFiltre.Text))
+                {
+                    continue;
+                }
+                if (saticiVarMi && saticiIsim != saticiFiltre.Text)
+                {
+                    continue;
+                }
+                if(durumVarMi&& durum != durumFiltre.Text)
+                {
+                    continue;
+                }
+                if (sehirVarMi && emlak.Sehir != sehirFiltre.Text)
+                {
+                    continue;
+                }
+                if (ilceVarMi && emlak.Ilce != ilceFiltre.Text)
+                {
+                    continue;
+                }
+
+                filtrelenmisEmlakListesi.Add(emlak);
+
             }
-            else
-            {
-                MessageBox.Show("Metrekare alaný boþ");
-            }
-           
             
-            if(filtrelenmisEmlakListesi!= null)
+            
+
+
+            if (filtrelenmisEmlakListesi!= null)
             {
                 filtrelenmisEmlakListesiUi.Rows.Clear();
                 filtrelenmisEmlakListesiUi.Columns.Clear();
@@ -185,7 +214,7 @@ namespace real_estate_app
         }
         public void EmlaklariListele(List<Emlak> emlakListesi)
         {
-            List<string> kolonIsimleriListe = new() { "Adres", "Þehir", "Ýlçe", "Oda Sayisi", "Metrekare", "Fiyat", "Satýþ Durumu", "Satýcý" };
+            List<string> kolonIsimleriListe = new() { "Emlak ID","Adres", "Þehir", "Ýlçe", "Oda Sayisi", "Metrekare", "Fiyat", "Satýþ Durumu", "Satýcý" };
             foreach (string kolonIsmi in kolonIsimleriListe)
             {
                 DataGridViewTextBoxColumn yeniKolon = new DataGridViewTextBoxColumn();
@@ -200,6 +229,7 @@ namespace real_estate_app
 
                 DataGridViewRow yeniSatir = new DataGridViewRow();
                 // Emlak bilgilerini ilgili hücrelere yerleþtirdik
+                yeniSatir.Cells.Add(new DataGridViewTextBoxCell { Value = emlak.EmlakId });
                 yeniSatir.Cells.Add(new DataGridViewTextBoxCell { Value = emlak.Adres });
                 yeniSatir.Cells.Add(new DataGridViewTextBoxCell { Value = emlak.Sehir });
                 yeniSatir.Cells.Add(new DataGridViewTextBoxCell { Value = emlak.Ilce });
@@ -214,6 +244,19 @@ namespace real_estate_app
             }
            
             
+        }
+
+        private void emlakGuncelle_Click(object sender, EventArgs e)
+        {
+            bool durum = (degistirmelikDurumlar.Text == "Satýldý") ? true : false;
+            Emlak degistirilecekEmlak = db.Emlaklar.FirstOrDefault(e => e.EmlakId == int.Parse(emlakIdDegistirmelik.Text));
+            degistirilecekEmlak.SatildiMi = durum;
+            db.SaveChanges();
+            MessageBox.Show($"({degistirilecekEmlak.Adres}) adresli emlaðýn durumu ({degistirmelikDurumlar.Text}) olarak deðiþtirildi.");
+
+            filtrelenmisEmlakListesiUi.Rows.Clear();
+            filtrelenmisEmlakListesiUi.Columns.Clear();
+            EmlaklariListele(db.Emlaklar.ToList());
         }
     }
 }

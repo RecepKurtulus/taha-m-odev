@@ -15,3 +15,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = real_estate_app
 build_property.ProjectDir = C:\Users\Recep\Desktop\taha-odev\Nesne3.0\app\real-estate-app\real-estate-app\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KQn35O3fxd60ps5HRK/4pkifLmeSCDlBXcwRhi+kPoDJJC1T3pFO51V1F6KQELvQFU1hjV5W2Q8DQo10Y4Vpbg==",
+  "dgSpecHash": "iiTycAWbi4T2t9JAjnIYLQl11JGqi4gxe5NtbciBeM3K2r4jAOlujwQnRNgAM1spuUyDwanIYkkhlNe1A99lVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Recep\\Desktop\\taha-odev\\Nesne3.0\\app\\real-estate-app\\real-estate-app\\real-estate-app.csproj",
   "expectedPackageFiles": [
@@ -25,7 +25,11 @@
     "C:\\Users\\Recep\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
     "C:\\Users\\Recep\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Recep\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\Recep\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\Recep\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\Recep\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Recep\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Recep\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Recep\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

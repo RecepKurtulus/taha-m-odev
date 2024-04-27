@@ -53,6 +53,8 @@
             this.adresGirisi = new System.Windows.Forms.TextBox();
             this.emlakListesiPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.emlakSilButon = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.emlakGuncelle = new System.Windows.Forms.Button();
             this.degistirmelikDurumlar = new System.Windows.Forms.ComboBox();
             this.emlakIdDegistirmelik = new System.Windows.Forms.TextBox();
@@ -333,6 +335,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(217)))), ((int)(((byte)(180)))));
+            this.panel3.Controls.Add(this.emlakSilButon);
+            this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.emlakGuncelle);
             this.panel3.Controls.Add(this.degistirmelikDurumlar);
             this.panel3.Controls.Add(this.emlakIdDegistirmelik);
@@ -358,9 +362,28 @@
             this.panel3.Size = new System.Drawing.Size(958, 564);
             this.panel3.TabIndex = 1;
             // 
+            // emlakSilButon
+            // 
+            this.emlakSilButon.Location = new System.Drawing.Point(37, 140);
+            this.emlakSilButon.Name = "emlakSilButon";
+            this.emlakSilButon.Size = new System.Drawing.Size(94, 29);
+            this.emlakSilButon.TabIndex = 25;
+            this.emlakSilButon.Text = "Sil";
+            this.emlakSilButon.UseVisualStyleBackColor = true;
+            this.emlakSilButon.Click += new System.EventHandler(this.emlakSilButon_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(45, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(220, 18);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Durum Güncelleme ve Silme Alanı";
+            // 
             // emlakGuncelle
             // 
-            this.emlakGuncelle.Location = new System.Drawing.Point(184, 131);
+            this.emlakGuncelle.Location = new System.Drawing.Point(184, 140);
             this.emlakGuncelle.Name = "emlakGuncelle";
             this.emlakGuncelle.Size = new System.Drawing.Size(94, 29);
             this.emlakGuncelle.TabIndex = 23;
@@ -375,14 +398,14 @@
             this.degistirmelikDurumlar.Items.AddRange(new object[] {
             "Satıldı",
             "Satışta"});
-            this.degistirmelikDurumlar.Location = new System.Drawing.Point(165, 99);
+            this.degistirmelikDurumlar.Location = new System.Drawing.Point(165, 108);
             this.degistirmelikDurumlar.Name = "degistirmelikDurumlar";
             this.degistirmelikDurumlar.Size = new System.Drawing.Size(113, 26);
             this.degistirmelikDurumlar.TabIndex = 22;
             // 
             // emlakIdDegistirmelik
             // 
-            this.emlakIdDegistirmelik.Location = new System.Drawing.Point(37, 99);
+            this.emlakIdDegistirmelik.Location = new System.Drawing.Point(37, 108);
             this.emlakIdDegistirmelik.Name = "emlakIdDegistirmelik";
             this.emlakIdDegistirmelik.PlaceholderText = "Emlak Id";
             this.emlakIdDegistirmelik.Size = new System.Drawing.Size(113, 26);
@@ -533,7 +556,7 @@
             // 
             // filtreleButon
             // 
-            this.filtreleButon.Location = new System.Drawing.Point(827, 127);
+            this.filtreleButon.Location = new System.Drawing.Point(827, 140);
             this.filtreleButon.Name = "filtreleButon";
             this.filtreleButon.Size = new System.Drawing.Size(94, 29);
             this.filtreleButon.TabIndex = 2;
@@ -548,8 +571,8 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.KayitPanel);
-            this.Controls.Add(this.emlakListesiPanel);
             this.Controls.Add(this.EmlakOlusturPanel);
+            this.Controls.Add(this.emlakListesiPanel);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "Form1";
@@ -616,5 +639,7 @@
         private ComboBox degistirmelikDurumlar;
         private TextBox emlakIdDegistirmelik;
         private Label label10;
+        private Label label11;
+        private Button emlakSilButon;
     }
 }
